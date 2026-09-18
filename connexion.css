@@ -1,0 +1,274 @@
+:root {
+    --dark: #26c255;
+    --green: #1E7A46;
+    --green-light: #EAF6EE;
+    --amber: #F5A623;
+    --ink: #1E2622;
+    --soil: #5B6760;
+    --line: #E6E4D8;
+    --cream: #FBFAF3;
+    --error: #D64545;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--ink);
+    background: #f5f7f5;
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+.wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ========== TOPBAR ========== */
+.topbar {
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+    padding: 14px 0;
+}
+
+.topbar .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: var(--dark);
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.logo .leaf {
+    font-size: 22px;
+}
+
+.link-login {
+    font-size: 13.5px;
+    color: var(--soil);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color .2s;
+}
+
+.link-login:hover {
+    color: var(--dark);
+}
+
+/* ========== MAIN ========== */
+.main {
+    padding: 50px 20px 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    width: 100%;
+    max-width: 420px;
+    padding: 36px 40px;
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.card-header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 6px;
+}
+
+.card-header p {
+    font-size: 14px;
+    color: var(--soil);
+}
+
+/* ========== ALERTS ========== */
+.alert {
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 22px;
+    font-size: 13.5px;
+}
+
+.alert.error {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #991b1b;
+}
+
+.alert.error ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.alert.error li {
+    margin-bottom: 4px;
+}
+
+/* ========== FORM ========== */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 6px;
+}
+
+.required {
+    color: var(--error);
+}
+
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid var(--line);
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    color: var(--ink);
+    transition: border-color .2s, box-shadow .2s;
+    background: #fff;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--dark);
+    box-shadow: 0 0 0 3px rgba(38, 194, 85, 0.15);
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+    font-size: 13px;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--soil);
+    cursor: pointer;
+}
+
+.remember input {
+    accent-color: var(--dark);
+}
+
+.forgot {
+    color: var(--green);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.forgot:hover {
+    text-decoration: underline;
+}
+
+.form-actions {
+    margin-top: 4px;
+}
+
+.btn-primary {
+    display: block;
+    width: 100%;
+    background: var(--dark);
+    color: #fff;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background .2s, transform .15s;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-primary:hover {
+    background: var(--green);
+    transform: translateY(-1px);
+}
+
+/* ========== DIVIDER & BOTTOM ========== */
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 24px 0 18px;
+    color: var(--soil);
+    font-size: 12.5px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--line);
+}
+
+.divider span {
+    padding: 0 14px;
+}
+
+.bottom-link {
+    text-align: center;
+    font-size: 13.5px;
+    color: var(--soil);
+}
+
+.bottom-link a {
+    color: var(--dark);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.bottom-link a:hover {
+    text-decoration: underline;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 480px) {
+    .card {
+        padding: 28px 20px;
+    }
+
+    .card-header h1 {
+        font-size: 20px;
+    }
+
+    .form-options {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+}

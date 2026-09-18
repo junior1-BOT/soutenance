@@ -1,0 +1,309 @@
+:root {
+    --dark: #26c255;
+    --green: #1E7A46;
+    --green-light: #EAF6EE;
+    --amber: #F5A623;
+    --ink: #1E2622;
+    --soil: #5B6760;
+    --line: #E6E4D8;
+    --cream: #FBFAF3;
+    --error: #D64545;
+    --success: #1E7A46;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--ink);
+    background: #f5f7f5;
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+.wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ========== TOPBAR ========== */
+.topbar {
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+    padding: 14px 0;
+}
+
+.topbar .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: var(--dark);
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.logo .leaf {
+    font-size: 22px;
+}
+
+.link-login {
+    font-size: 13.5px;
+    color: var(--soil);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color .2s;
+}
+
+.link-login:hover {
+    color: var(--dark);
+}
+
+/* ========== MAIN ========== */
+.main {
+    padding: 40px 20px 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    width: 100%;
+    max-width: 580px;
+    padding: 36px 40px;
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.card-header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 6px;
+}
+
+.card-header p {
+    font-size: 14px;
+    color: var(--soil);
+}
+
+/* ========== ALERTS ========== */
+.alert {
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 13.5px;
+}
+
+.alert.error {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #991b1b;
+}
+
+.alert.error ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.alert.error li {
+    margin-bottom: 4px;
+}
+
+.alert.success {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    color: #166534;
+    text-align: center;
+}
+
+/* ========== FORM ========== */
+fieldset {
+    border: none;
+    margin-bottom: 24px;
+}
+
+legend {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 16px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--green-light);
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label,
+.label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 6px;
+}
+
+.required {
+    color: var(--error);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="password"],
+.form-group textarea {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1.5px solid var(--line);
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    color: var(--ink);
+    transition: border-color .2s, box-shadow .2s;
+    background: #fff;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--dark);
+    box-shadow: 0 0 0 3px rgba(38, 194, 85, 0.15);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+/* ========== ROLE CARDS ========== */
+.role-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.role-card {
+    cursor: pointer;
+}
+
+.role-card input {
+    display: none;
+}
+
+.role-content {
+    border: 2px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 12px;
+    text-align: center;
+    transition: all .2s;
+    background: #fff;
+}
+
+.role-card input:checked + .role-content {
+    border-color: var(--dark);
+    background: var(--green-light);
+    box-shadow: 0 0 0 3px rgba(38, 194, 85, 0.15);
+}
+
+.role-card:hover .role-content {
+    border-color: var(--dark);
+}
+
+.role-icon {
+    font-size: 28px;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.role-content strong {
+    display: block;
+    font-size: 14px;
+    color: var(--dark);
+    margin-bottom: 2px;
+}
+
+.role-content small {
+    font-size: 11.5px;
+    color: var(--soil);
+}
+
+/* ========== ACTIONS ========== */
+.form-actions {
+    margin-top: 8px;
+    text-align: center;
+}
+
+.btn-primary {
+    display: block;
+    width: 100%;
+    background: var(--dark);
+    color: #fff;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background .2s, transform .15s;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-primary:hover {
+    background: var(--green);
+    transform: translateY(-1px);
+}
+
+.cgu {
+    margin-top: 14px;
+    font-size: 12px;
+    color: var(--soil);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 600px) {
+    .card {
+        padding: 28px 20px;
+    }
+
+    .row {
+        grid-template-columns: 1fr;
+    }
+
+    .role-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card-header h1 {
+        font-size: 20px;
+    }
+}
